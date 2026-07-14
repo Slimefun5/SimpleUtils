@@ -1,5 +1,6 @@
 package io.github.mooy1.simpleutils.implementation.blocks;
 
+import java.lang.reflect.Method;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.UUID;
@@ -12,8 +13,6 @@ import javax.annotation.ParametersAreNonnullByDefault;
 
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
-import org.bukkit.Material;
-import org.bukkit.NamespacedKey;
 import org.bukkit.block.Block;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
@@ -21,22 +20,25 @@ import org.bukkit.event.Listener;
 import org.bukkit.event.inventory.InventoryDragEvent;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
-import org.bukkit.persistence.PersistentDataType;
 
 import io.github.mooy1.infinitylib.common.Events;
 import io.github.mooy1.infinitylib.common.Scheduler;
 import io.github.mooy1.infinitylib.machines.MachineLayout;
 import io.github.mooy1.infinitylib.machines.MenuBlock;
 import io.github.mooy1.simpleutils.SimpleUtils;
-import io.github.thebusybiscuit.slimefun4.api.MinecraftVersion;
-import io.github.thebusybiscuit.slimefun4.api.items.ItemGroup;
-import io.github.thebusybiscuit.slimefun4.api.items.SlimefunItem;
-import io.github.thebusybiscuit.slimefun4.api.items.SlimefunItemStack;
-import io.github.thebusybiscuit.slimefun4.api.recipes.RecipeType;
-import io.github.thebusybiscuit.slimefun4.implementation.Slimefun;
-import io.github.thebusybiscuit.slimefun4.implementation.items.backpacks.SlimefunBackpack;
-import io.github.thebusybiscuit.slimefun4.libraries.dough.items.CustomItemStack;
-import io.github.thebusybiscuit.slimefun4.libraries.dough.items.ItemStackSnapshot;
+import io.github.mooy1.simpleutils.utils.MaterialCompat;
+import io.github.thebusybiscuit.slimefun5.api.MinecraftVersion;
+import io.github.thebusybiscuit.slimefun5.api.items.ItemGroup;
+import io.github.thebusybiscuit.slimefun5.api.items.SlimefunItem;
+import io.github.thebusybiscuit.slimefun5.api.items.SlimefunItemStack;
+import io.github.thebusybiscuit.slimefun5.api.recipes.RecipeType;
+import io.github.thebusybiscuit.slimefun5.implementation.Slimefun;
+import io.github.thebusybiscuit.slimefun5.implementation.items.backpacks.SlimefunBackpack;
+import io.github.thebusybiscuit.slimefun5.libraries.dough.items.CustomItemStack;
+import io.github.thebusybiscuit.slimefun5.libraries.dough.items.ItemStackSnapshot;
+import io.github.thebusybiscuit.slimefun5.libraries.keys.NamespacedKey;
+import io.github.thebusybiscuit.slimefun5.libraries.xseries.XMaterial;
+import io.github.thebusybiscuit.slimefun5.utils.compatibility.BukkitKeys;
 import me.mrCookieSlime.Slimefun.api.inventory.BlockMenu;
 import me.mrCookieSlime.Slimefun.api.inventory.BlockMenuPreset;
 import me.mrCookieSlime.Slimefun.api.inventory.DirtyChestMenu;
@@ -46,7 +48,7 @@ public final class Workbench extends MenuBlock implements Listener {
 
     private static final int[] INPUT_SLOTS = MachineLayout.CRAFTING_DEFAULT.inputSlots();
     private static final int OUTPUT_SLOT = 24;
-    private static final ItemStack NO_OUTPUT = new CustomItemStack(Material.BARRIER, " ");
+    private static final ItemStack NO_OUTPUT = CustomItemStack.create(MaterialCompat.safe(XMaterial.BARRIER), " ");
 
     private final NamespacedKey displayKey = SimpleUtils.createKey("display");
     private final BiFunction<ItemStack[], Player, ItemStack> craftItem;
@@ -178,12 +180,12 @@ public final class Workbench extends MenuBlock implements Listener {
             }
             else {
                 arr = new ItemStack[fullStacks + 1];
-                arr[fullStacks] = new CustomItemStack(output, partialStack);
+                arr[fullStacks] = CustomItemStack.create(output, partialStack);
             }
 
             // fill with full stacks
             while (fullStacks-- != 0) {
-                arr[fullStacks] = new CustomItemStack(output, output.getMaxStackSize());
+                arr[fullStacks] = CustomItemStack.create(output, output.getMaxStackSize());
             }
 
             // output and drop remaining
@@ -240,7 +242,7 @@ public final class Workbench extends MenuBlock implements Listener {
             else {
                 output = output.clone();
                 ItemMeta meta = output.getItemMeta();
-                meta.getPersistentDataContainer().set(this.displayKey, PersistentDataType.BYTE, (byte) 0);
+                markDisplay(meta);
                 output.setItemMeta(meta);
                 menu.replaceExistingItem(OUTPUT_SLOT, output);
             }
@@ -255,10 +257,41 @@ public final class Workbench extends MenuBlock implements Listener {
         }
     }
 
+    /**
+     * Marks a cloned output preview with a PDC byte flag, routed reflectively since PersistentDataType
+     * only exists on 1.14+ - this quietly no-ops on legacy servers instead of a NoClassDefFoundError.
+     */
+    private void markDisplay(@Nonnull ItemMeta meta) {
+        try {
+            Object container = ItemMeta.class.getMethod("getPersistentDataContainer").invoke(meta);
+            Object bukkitKey = BukkitKeys.toBukkit(this.displayKey);
+            if (bukkitKey == null) {
+                return;
+            }
+            Class<?> keyClass = Class.forName("org.bukkit.NamespacedKey");
+            Class<?> typeClass = Class.forName("org.bukkit.persistence.PersistentDataType");
+            Object byteType = typeClass.getField("BYTE").get(null);
+            container.getClass().getMethod("set", keyClass, typeClass, Object.class)
+                    .invoke(container, bukkitKey, byteType, (byte) 0);
+        } catch (ReflectiveOperationException ignored) {
+            // not supported on this version
+        }
+    }
+
+    /**
+     * {@code Bukkit#craftItem(ItemStack[], World, Player)} is absent from the Java-8-compatible
+     * spigot-api compile baseline, so it's resolved reflectively here and only invoked on 1.17+
+     * (see the version check in the constructor).
+     */
     @Nullable
     private static ItemStack craftItem(ItemStack[] input, Player p) {
-        ItemStack output = Bukkit.craftItem(input, p.getWorld(), p);
-        return output.getType().isAir() ? null : output;
+        try {
+            Method craftItem = Bukkit.class.getMethod("craftItem", ItemStack[].class, org.bukkit.World.class, Player.class);
+            ItemStack output = (ItemStack) craftItem.invoke(null, (Object) input, p.getWorld(), p);
+            return output == null || output.getType().isAir() ? null : output;
+        } catch (ReflectiveOperationException e) {
+            return null;
+        }
     }
 
     @Nullable

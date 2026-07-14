@@ -5,7 +5,7 @@ website: https://github.com/Mooy1/SimpleUtils
 main: io.github.mooy1.simpleutils.SimpleUtils
 depend: [Slimefun]
 softdepend: [InfinityExpansion]
-version: ${project.version}
+version: ${version}
 api-version: 1.16
 
 commands:

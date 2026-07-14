@@ -9,7 +9,6 @@ import javax.annotation.Nonnull;
 
 import org.bukkit.ChatColor;
 import org.bukkit.GameMode;
-import org.bukkit.Material;
 import org.bukkit.Sound;
 import org.bukkit.block.Block;
 import org.bukkit.block.BlockFace;
@@ -20,14 +19,16 @@ import org.bukkit.inventory.ItemStack;
 import io.github.mooy1.infinitylib.common.Scheduler;
 import io.github.mooy1.infinitylib.common.StackUtils;
 import io.github.mooy1.simpleutils.SimpleUtils;
-import io.github.thebusybiscuit.slimefun4.api.items.ItemGroup;
-import io.github.thebusybiscuit.slimefun4.api.items.SlimefunItemStack;
-import io.github.thebusybiscuit.slimefun4.core.multiblocks.MultiBlockMachine;
-import io.github.thebusybiscuit.slimefun4.implementation.SlimefunItems;
-import io.github.thebusybiscuit.slimefun4.implementation.items.blocks.OutputChest;
-import io.github.thebusybiscuit.slimefun4.libraries.dough.collections.RandomizedSet;
-import io.github.thebusybiscuit.slimefun4.libraries.dough.items.CustomItemStack;
-import io.github.thebusybiscuit.slimefun4.libraries.dough.items.ItemUtils;
+import io.github.mooy1.simpleutils.utils.MaterialCompat;
+import io.github.thebusybiscuit.slimefun5.api.items.ItemGroup;
+import io.github.thebusybiscuit.slimefun5.api.items.SlimefunItemStack;
+import io.github.thebusybiscuit.slimefun5.core.multiblocks.MultiBlockMachine;
+import io.github.thebusybiscuit.slimefun5.implementation.SlimefunItems;
+import io.github.thebusybiscuit.slimefun5.implementation.items.blocks.OutputChest;
+import io.github.thebusybiscuit.slimefun5.libraries.dough.collections.RandomizedSet;
+import io.github.thebusybiscuit.slimefun5.libraries.dough.items.CustomItemStack;
+import io.github.thebusybiscuit.slimefun5.libraries.dough.items.ItemUtils;
+import io.github.thebusybiscuit.slimefun5.libraries.xseries.XMaterial;
 
 public final class Sieve extends MultiBlockMachine {
 
@@ -38,26 +39,26 @@ public final class Sieve extends MultiBlockMachine {
     public Sieve(ItemGroup category, SlimefunItemStack item, ItemStack[] recipe, BlockFace face) {
         super(category, item, recipe, face);
 
-        this.recipes.add(new ItemStack(Material.AIR), 25 * (100 - itemChance));
-        addRecipe(SlimefunItems.ALUMINUM_DUST, 2);
-        addRecipe(SlimefunItems.COPPER_DUST, 3);
-        addRecipe(SlimefunItems.IRON_DUST, 2);
-        addRecipe(SlimefunItems.LEAD_DUST, 1);
-        addRecipe(SlimefunItems.GOLD_DUST, 2);
-        addRecipe(SlimefunItems.ZINC_DUST, 2);
-        addRecipe(SlimefunItems.MAGNESIUM_DUST, 1);
-        addRecipe(SlimefunItems.SILVER_DUST, 1);
-        addRecipe(SlimefunItems.TIN_DUST, 1);
-        addRecipe(new ItemStack(Material.CLAY_BALL), 4);
-        addRecipe(new ItemStack(Material.FLINT), 3);
-        addRecipe(new ItemStack(Material.IRON_NUGGET), 3);
+        this.recipes.add(new ItemStack(MaterialCompat.safe(XMaterial.AIR)), 25 * (100 - itemChance));
+        addRecipe(SlimefunItems.ALUMINUM_DUST.item(), 2);
+        addRecipe(SlimefunItems.COPPER_DUST.item(), 3);
+        addRecipe(SlimefunItems.IRON_DUST.item(), 2);
+        addRecipe(SlimefunItems.LEAD_DUST.item(), 1);
+        addRecipe(SlimefunItems.GOLD_DUST.item(), 2);
+        addRecipe(SlimefunItems.ZINC_DUST.item(), 2);
+        addRecipe(SlimefunItems.MAGNESIUM_DUST.item(), 1);
+        addRecipe(SlimefunItems.SILVER_DUST.item(), 1);
+        addRecipe(SlimefunItems.TIN_DUST.item(), 1);
+        addRecipe(new ItemStack(MaterialCompat.safe(XMaterial.CLAY_BALL)), 4);
+        addRecipe(new ItemStack(MaterialCompat.safe(XMaterial.FLINT)), 3);
+        addRecipe(new ItemStack(MaterialCompat.safe(XMaterial.IRON_NUGGET)), 3);
     }
 
     private void addRecipe(ItemStack item, float chance) {
         float finalChance = chance * itemChance;
         this.recipes.add(item, finalChance);
-        this.displayRecipes.add(new ItemStack(Material.GRAVEL));
-        this.displayRecipes.add(new CustomItemStack(item, itemMeta -> itemMeta.setLore(Arrays.asList("", "&6Chance: " + finalChance))));
+        this.displayRecipes.add(new ItemStack(MaterialCompat.safe(XMaterial.GRAVEL)));
+        this.displayRecipes.add(CustomItemStack.create(item, itemMeta -> itemMeta.setLore(Arrays.asList("", "&6Chance: " + finalChance))));
     }
 
     @Nonnull
@@ -70,7 +71,7 @@ public final class Sieve extends MultiBlockMachine {
     public void onInteract(Player p, Block b) {
         ItemStack input = p.getInventory().getItemInMainHand();
 
-        if (StackUtils.getId(input) != null || input.getType() != Material.GRAVEL) {
+        if (StackUtils.getId(input) != null || input.getType() != MaterialCompat.safe(XMaterial.GRAVEL)) {
             p.sendMessage(ChatColor.RED + "Invalid Recipe!");
             return;
         }
@@ -81,7 +82,7 @@ public final class Sieve extends MultiBlockMachine {
             ItemUtils.consumeItem(input, 1, false);
         }
 
-        if (item.getType() == Material.AIR) {
+        if (item.getType() == MaterialCompat.safe(XMaterial.AIR)) {
             return;
         }
 

@@ -10,11 +10,11 @@ import org.bukkit.inventory.ItemStack;
 
 import io.github.mooy1.infinitylib.common.Scheduler;
 import io.github.mooy1.infinitylib.common.StackUtils;
-import io.github.thebusybiscuit.slimefun4.api.items.ItemGroup;
-import io.github.thebusybiscuit.slimefun4.api.items.SlimefunItemStack;
-import io.github.thebusybiscuit.slimefun4.implementation.SlimefunItems;
-import io.github.thebusybiscuit.slimefun4.implementation.items.multiblocks.EnhancedCraftingTable;
-import io.github.thebusybiscuit.slimefun4.libraries.dough.items.ItemStackSnapshot;
+import io.github.thebusybiscuit.slimefun5.api.items.ItemGroup;
+import io.github.thebusybiscuit.slimefun5.api.items.SlimefunItemStack;
+import io.github.thebusybiscuit.slimefun5.implementation.SlimefunItems;
+import io.github.thebusybiscuit.slimefun5.implementation.items.multiblocks.EnhancedCraftingTable;
+import io.github.thebusybiscuit.slimefun5.libraries.dough.items.ItemStackSnapshot;
 
 class FakeEnhancedCrafter extends EnhancedCraftingTable {
 
