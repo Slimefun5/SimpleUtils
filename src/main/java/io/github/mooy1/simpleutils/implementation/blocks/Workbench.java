@@ -38,7 +38,7 @@ import io.github.thebusybiscuit.slimefun5.libraries.dough.items.CustomItemStack;
 import io.github.thebusybiscuit.slimefun5.libraries.dough.items.ItemStackSnapshot;
 import io.github.thebusybiscuit.slimefun5.libraries.keys.NamespacedKey;
 import io.github.thebusybiscuit.slimefun5.libraries.xseries.XMaterial;
-import io.github.thebusybiscuit.slimefun5.utils.compatibility.BukkitKeys;
+import io.github.thebusybiscuit.slimefun5.utils.compatibility.PdcCompat;
 import me.mrCookieSlime.Slimefun.api.inventory.BlockMenu;
 import me.mrCookieSlime.Slimefun.api.inventory.BlockMenuPreset;
 import me.mrCookieSlime.Slimefun.api.inventory.DirtyChestMenu;
@@ -258,24 +258,12 @@ public final class Workbench extends MenuBlock implements Listener {
     }
 
     /**
-     * Marks a cloned output preview with a PDC byte flag, routed reflectively since PersistentDataType
-     * only exists on 1.14+ - this quietly no-ops on legacy servers instead of a NoClassDefFoundError.
+     * Marks a cloned output preview with a PDC byte flag. Routed through the fork's reflective
+     * {@link PdcCompat} so it never references the 1.14+ {@code PersistentDataType}/container types in
+     * bytecode (on 1.8-1.13 it falls back to item NBT), keeping the Workbench usable on 1.8.8.
      */
     private void markDisplay(@Nonnull ItemMeta meta) {
-        try {
-            Object container = ItemMeta.class.getMethod("getPersistentDataContainer").invoke(meta);
-            Object bukkitKey = BukkitKeys.toBukkit(this.displayKey);
-            if (bukkitKey == null) {
-                return;
-            }
-            Class<?> keyClass = Class.forName("org.bukkit.NamespacedKey");
-            Class<?> typeClass = Class.forName("org.bukkit.persistence.PersistentDataType");
-            Object byteType = typeClass.getField("BYTE").get(null);
-            container.getClass().getMethod("set", keyClass, typeClass, Object.class)
-                    .invoke(container, bukkitKey, byteType, (byte) 0);
-        } catch (ReflectiveOperationException ignored) {
-            // not supported on this version
-        }
+        PdcCompat.setByte(meta, this.displayKey, (byte) 1);
     }
 
     /**
