@@ -7,6 +7,7 @@ import org.bukkit.plugin.java.JavaPluginLoader;
 
 import io.github.mooy1.infinitylib.core.AbstractAddon;
 import io.github.mooy1.simpleutils.implementation.Items;
+import io.github.thebusybiscuit.slimefun5.implementation.Slimefun;
 
 public final class SimpleUtils extends AbstractAddon {
 
@@ -22,6 +23,9 @@ public final class SimpleUtils extends AbstractAddon {
     @Override
     protected void enable() {
         Items.setup(this);
+
+        // Contribute this addon's per-language item translations (languages/<lang>/items.yml).
+        Slimefun.getItemTranslationService().registerTranslations(this);
     }
 
     @Override
