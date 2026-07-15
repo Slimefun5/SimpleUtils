@@ -1,0 +1,11 @@
+# Per-item balance scores (0-100) for SimpleUtils, relative to vanilla Minecraft.
+# Read by Slimefun's BalanceService (overrides the auto heuristic). Bands:
+#   0-10 Trivial | 11-25 Standard | 26-40 Advanced | 41-69 Powerful | 70-100 Overpowered
+#   (vanilla anchors: iron gear ~15, netherite ~30, beacon ~35, end crystal ~70, mace ~85)
+# Scores below are derived from actual stats read from src/main/java (recipe cost,
+# convenience, resource generation) - see source for specifics.
+scores:
+  SIMPLE_WORKBENCH: 28  # crafts BOTH vanilla and Slimefun recipes from one block (strong convenience)
+  SIMPLE_WRENCH: 22     # aluminum+silver tool; instantly dismantles cargo/capacitors/machines
+  SIMPLE_SIEVE: 20      # multiblock; sifts gravel into random dusts/materials (early resource gen)
+  SIMPLE_ELEVATOR: 16   # quartz+ender pearl block; instant vertical travel between stacked elevators

@@ -1,0 +1,38 @@
+# English item lore for SimpleUtils. Keyed by Slimefun item id.
+# Composed by LoreComposer in order: Type -> Description -> Stats -> Usage.
+
+SIMPLE_WRENCH:
+  name: "&6Simple Wrench"
+  type:
+    - "&7&oTool"
+  description:
+    - "&7Quickly dismantles cargo nodes, capacitors and machines."
+  usage:
+    - "&eRight Click a Slimefun block to dismantle it."
+
+SIMPLE_SIEVE:
+  name: "&6Simple Sieve"
+  type:
+    - "&7&oMultiblock Machine"
+  description:
+    - "&7Sifts gravel into dusts and materials."
+  usage:
+    - "&7Right Click the composter while holding"
+    - "&7gravel to sift it for a random drop."
+
+SIMPLE_ELEVATOR:
+  name: "&fSimple Elevator"
+  type:
+    - "&7&oBlock"
+  description:
+    - "&7Instantly travels between stacked elevators."
+  usage:
+    - "&7Jump to go up, crouch to go down."
+
+SIMPLE_WORKBENCH:
+  name: "&6Simple Workbench"
+  type:
+    - "&7&oMachine"
+  description:
+    - "&7Crafts both vanilla and Slimefun recipes"
+    - "&7from a single interface."

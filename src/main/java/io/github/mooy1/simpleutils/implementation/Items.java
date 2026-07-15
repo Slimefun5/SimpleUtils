@@ -25,29 +25,22 @@ import io.github.thebusybiscuit.slimefun5.libraries.xseries.XMaterial;
 @UtilityClass
 public final class Items {
 
+    // Names and lore live in languages/<lang>/items.yml (registered via the item translation service).
     public static final SlimefunItemStack WRENCH = new SlimefunItemStack(
             "SIMPLE_WRENCH",
-            MaterialCompat.safe(XMaterial.IRON_HOE),
-            "&6Simple Wrench",
-            "&eRight-Click to quickly dismantle cargo, capacitors, and machines"
+            MaterialCompat.safe(XMaterial.IRON_HOE)
     );
     public static final SlimefunItemStack SIEVE = new SlimefunItemStack(
             "SIMPLE_SIEVE",
-            MaterialCompat.safe(XMaterial.COMPOSTER),
-            "&6Simple Sieve",
-            "&7Sifts gravel into dusts and materials"
+            MaterialCompat.safe(XMaterial.COMPOSTER)
     );
     public static final SlimefunItemStack ELEVATOR = new SlimefunItemStack(
             "SIMPLE_ELEVATOR",
-            MaterialCompat.safe(XMaterial.QUARTZ_BLOCK),
-            "&fSimple Elevator",
-            "&7Crouch to go down, Jump to go up"
+            MaterialCompat.safe(XMaterial.QUARTZ_BLOCK)
     );
     public static final SlimefunItemStack WORKBENCH = new SlimefunItemStack(
             "SIMPLE_WORKBENCH",
-            MaterialCompat.safe(XMaterial.CRAFTING_TABLE),
-            "&6Simple Workbench",
-            "&7Can craft both vanilla and slimefun recipes"
+            MaterialCompat.safe(XMaterial.CRAFTING_TABLE)
     );
 
     public static void setup(@Nonnull SimpleUtils plugin) {
