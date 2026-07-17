@@ -29,6 +29,7 @@ import io.github.thebusybiscuit.slimefun5.libraries.dough.collections.Randomized
 import io.github.thebusybiscuit.slimefun5.libraries.dough.items.CustomItemStack;
 import io.github.thebusybiscuit.slimefun5.libraries.dough.items.ItemUtils;
 import io.github.thebusybiscuit.slimefun5.libraries.xseries.XMaterial;
+import io.github.thebusybiscuit.slimefun5.utils.compatibility.HandCompat;
 
 public final class Sieve extends MultiBlockMachine {
 
@@ -69,7 +70,7 @@ public final class Sieve extends MultiBlockMachine {
 
     @Override
     public void onInteract(Player p, Block b) {
-        ItemStack input = p.getInventory().getItemInMainHand();
+        ItemStack input = HandCompat.getMainHand(p.getInventory());
 
         if (StackUtils.getId(input) != null || input.getType() != MaterialCompat.safe(XMaterial.GRAVEL)) {
             p.sendMessage(ChatColor.RED + "Invalid Recipe!");
