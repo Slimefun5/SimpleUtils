@@ -47,27 +47,36 @@ public final class Items {
         ItemGroup category = new ItemGroup(SimpleUtils.createKey("main"),
                 CustomItemStack.create(MaterialCompat.safe(XMaterial.COMPOSTER), "&6Simple Utils"), 0);
 
-        new Workbench(category, WORKBENCH, RecipeType.ENHANCED_CRAFTING_TABLE,
+        // Guide categories the auto-classifier heuristic can't infer from material/attributes.
+        Workbench workbench = new Workbench(category, WORKBENCH, RecipeType.ENHANCED_CRAFTING_TABLE,
                 Arrays.copyOf(new ItemStack[] {new ItemStack(MaterialCompat.safe(XMaterial.CRAFTING_TABLE))}, 9)
-        ).register(plugin);
+        );
+        workbench.setGuideType("machines");
+        workbench.register(plugin);
 
-        new Sieve(category, SIEVE, new ItemStack[] {
+        Sieve sieve = new Sieve(category, SIEVE, new ItemStack[] {
                 null, null, null,
                 null, new ItemStack(MaterialCompat.safe(XMaterial.OAK_TRAPDOOR)), null,
                 null, new ItemStack(MaterialCompat.safe(XMaterial.COMPOSTER)), null
-        }, BlockFace.SELF).register(plugin);
+        }, BlockFace.SELF);
+        sieve.setGuideType("machines");
+        sieve.register(plugin);
 
-        new Elevator(category, ELEVATOR, RecipeType.ENHANCED_CRAFTING_TABLE, new ItemStack[] {
+        Elevator elevator = new Elevator(category, ELEVATOR, RecipeType.ENHANCED_CRAFTING_TABLE, new ItemStack[] {
                 new ItemStack(MaterialCompat.safe(XMaterial.QUARTZ_BLOCK)), new ItemStack(MaterialCompat.safe(XMaterial.QUARTZ_BLOCK)), new ItemStack(MaterialCompat.safe(XMaterial.QUARTZ_BLOCK)),
                 new ItemStack(MaterialCompat.safe(XMaterial.QUARTZ_BLOCK)), new ItemStack(MaterialCompat.safe(XMaterial.ENDER_PEARL)), new ItemStack(MaterialCompat.safe(XMaterial.QUARTZ_BLOCK)),
                 new ItemStack(MaterialCompat.safe(XMaterial.QUARTZ_BLOCK)), new ItemStack(MaterialCompat.safe(XMaterial.QUARTZ_BLOCK)), new ItemStack(MaterialCompat.safe(XMaterial.QUARTZ_BLOCK))
-        }).register(plugin);
+        });
+        elevator.setGuideType("logistics");
+        elevator.register(plugin);
 
-        new Wrench(category, WRENCH, RecipeType.ENHANCED_CRAFTING_TABLE, new ItemStack[] {
+        Wrench wrench = new Wrench(category, WRENCH, RecipeType.ENHANCED_CRAFTING_TABLE, new ItemStack[] {
                 SlimefunItems.ALUMINUM_INGOT.item(), null, SlimefunItems.ALUMINUM_INGOT.item(),
                 null, SlimefunItems.SILVER_INGOT.item(), null,
                 null, SlimefunItems.ALUMINUM_INGOT.item(), null
-        }).register(plugin);
+        });
+        wrench.setGuideType("tools");
+        wrench.register(plugin);
     }
 
 }
