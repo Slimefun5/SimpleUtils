@@ -23,8 +23,6 @@ public final class SimpleUtils extends AbstractAddon {
     @Override
     protected void enable() {
         Items.setup(this);
-
-        // Contribute this addon's per-language item translations (languages/<lang>/items.yml).
         Slimefun.getItemTranslationService().registerTranslations(this);
     }
 
