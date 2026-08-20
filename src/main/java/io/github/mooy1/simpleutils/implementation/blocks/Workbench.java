@@ -153,7 +153,6 @@ public final class Workbench extends MenuBlock implements Listener {
             }
         }
 
-        // find smallest amount greater than 0
         int lowestAmount = 65;
         for (int i : amounts) {
             if (i > 0 && i < lowestAmount) {
@@ -168,12 +167,10 @@ public final class Workbench extends MenuBlock implements Listener {
 
         if (max) {
 
-            // calc amounts
             int total = output.getAmount() * lowestAmount;
             int fullStacks = total / output.getMaxStackSize();
             int partialStack = total % output.getMaxStackSize();
 
-            // create array of items
             ItemStack[] arr;
             if (partialStack == 0) {
                 arr = new ItemStack[fullStacks];
@@ -183,30 +180,25 @@ public final class Workbench extends MenuBlock implements Listener {
                 arr[fullStacks] = CustomItemStack.create(output, partialStack);
             }
 
-            // fill with full stacks
             while (fullStacks-- != 0) {
                 arr[fullStacks] = CustomItemStack.create(output, output.getMaxStackSize());
             }
 
-            // output and drop remaining
             Map<Integer, ItemStack> remaining = p.getInventory().addItem(arr);
             for (ItemStack stack : remaining.values()) {
                 p.getWorld().dropItemNaturally(p.getLocation(), stack);
             }
 
-            // refresh
             refreshOutput(menu, p);
 
         }
         else {
 
-            // output and drop remaining
             Map<Integer, ItemStack> remaining = p.getInventory().addItem(output.clone());
             for (ItemStack stack : remaining.values()) {
                 p.getWorld().dropItemNaturally(p.getLocation(), stack);
             }
 
-            // refresh if a slot will run out
             if (lowestAmount == 1) {
                 refreshOutput(menu, p);
             }
@@ -214,7 +206,6 @@ public final class Workbench extends MenuBlock implements Listener {
             lowestAmount = 1;
         }
 
-        // consume
         for (int i = 0 ; i < 9 ; i++) {
             if (amounts[i] != 0) {
                 menu.consumeItem(INPUT_SLOTS[i], lowestAmount, true);
