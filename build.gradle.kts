@@ -10,7 +10,7 @@ description = "SimpleUtils is a Slimefun addon that adds simple utility items an
 apply(from = "https://raw.githubusercontent.com/Slimefun5/gradle/stable/slimefun-addon.gradle")
 
 dependencies {
-    githubImplementation("Slimefun5:InfinityLib:v1.3.13")
+    githubImplementation("Slimefun5:InfinityLib:v1.3.14.7")
     compileOnly("org.projectlombok:lombok:1.18.36")
     annotationProcessor("org.projectlombok:lombok:1.18.36")
 }
