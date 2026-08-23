@@ -46,6 +46,8 @@ public final class Items {
     public static void setup(@Nonnull SimpleUtils plugin) {
         ItemGroup category = new ItemGroup(SimpleUtils.createKey("main"),
                 CustomItemStack.create(MaterialCompat.safe(XMaterial.COMPOSTER), "&6Simple Utils"), 0);
+        // Places this addon's items in the shared guide categories (see ItemTypeClassifier).
+        category.setCategory("misc");
 
         // Guide categories the auto-classifier heuristic can't infer from material/attributes.
         Workbench workbench = new Workbench(category, WORKBENCH, RecipeType.ENHANCED_CRAFTING_TABLE,
