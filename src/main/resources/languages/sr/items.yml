@@ -3,10 +3,10 @@ SIMPLE_ELEVATOR:
   - '&7&oБлок'
 SIMPLE_SIEVE:
   type:
-  - '&7&oМультиблочная машина'
+  - '&7&oМултиблок машина'
 SIMPLE_WORKBENCH:
   type:
   - '&7&oМашина'
 SIMPLE_WRENCH:
   type:
-  - '&7&oИнструмент'
+  - '&7&oАлат'

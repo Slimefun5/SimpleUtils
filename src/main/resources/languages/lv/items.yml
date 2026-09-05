@@ -1,12 +1,12 @@
 SIMPLE_ELEVATOR:
   type:
-  - '&7&oBloco'
+  - '&7&oBloks'
 SIMPLE_SIEVE:
   type:
-  - '&7&oMáquina multibloco'
+  - '&7&oDaudzbloku mašīna'
 SIMPLE_WORKBENCH:
   type:
-  - '&7&oMáquina'
+  - '&7&oMašīna'
 SIMPLE_WRENCH:
   type:
-  - '&7&oFerramenta'
+  - '&7&oRīks'

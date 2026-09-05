@@ -1,0 +1,12 @@
+SIMPLE_ELEVATOR:
+  type:
+  - '&7&oකැටය'
+SIMPLE_SIEVE:
+  type:
+  - '&7&oබහුකැට යන්ත්‍රය'
+SIMPLE_WORKBENCH:
+  type:
+  - '&7&oයන්ත්‍රය'
+SIMPLE_WRENCH:
+  type:
+  - '&7&oමෙවලම'

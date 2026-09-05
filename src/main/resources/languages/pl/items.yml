@@ -1,2 +1,12 @@
-# Polish item translations for SimpleUtils. Keyed by Slimefun item id.
-# name = display name with '&' colour codes. Missing items fall back to English.
+SIMPLE_ELEVATOR:
+  type:
+  - '&7&oBlok'
+SIMPLE_SIEVE:
+  type:
+  - '&7&oMaszyna multiblokowa'
+SIMPLE_WORKBENCH:
+  type:
+  - '&7&oMaszyna'
+SIMPLE_WRENCH:
+  type:
+  - '&7&oNarzędzie'

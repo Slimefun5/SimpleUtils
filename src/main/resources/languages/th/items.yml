@@ -1,0 +1,12 @@
+SIMPLE_ELEVATOR:
+  type:
+  - '&7&oบล็อก'
+SIMPLE_SIEVE:
+  type:
+  - '&7&oเครื่องจักรมัลติบล็อก'
+SIMPLE_WORKBENCH:
+  type:
+  - '&7&oเครื่องจักร'
+SIMPLE_WRENCH:
+  type:
+  - '&7&oเครื่องมือ'

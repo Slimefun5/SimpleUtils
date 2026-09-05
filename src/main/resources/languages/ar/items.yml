@@ -1,12 +1,12 @@
 SIMPLE_ELEVATOR:
   type:
-  - '&7&oBloco'
+  - '&7&oكتلة'
 SIMPLE_SIEVE:
   type:
-  - '&7&oMáquina multibloco'
+  - '&7&oآلة بنية مركبة'
 SIMPLE_WORKBENCH:
   type:
-  - '&7&oMáquina'
+  - '&7&oآلة'
 SIMPLE_WRENCH:
   type:
-  - '&7&oFerramenta'
+  - '&7&oأداة'

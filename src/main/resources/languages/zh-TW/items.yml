@@ -1,12 +1,12 @@
 SIMPLE_ELEVATOR:
   type:
-  - '&7&oBloco'
+  - '&7&o方塊'
 SIMPLE_SIEVE:
   type:
-  - '&7&oMáquina multibloco'
+  - '&7&o多重方塊機器'
 SIMPLE_WORKBENCH:
   type:
-  - '&7&oMáquina'
+  - '&7&o機器'
 SIMPLE_WRENCH:
   type:
-  - '&7&oFerramenta'
+  - '&7&o工具'

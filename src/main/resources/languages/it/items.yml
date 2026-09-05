@@ -1,2 +1,12 @@
-# Italian item translations for SimpleUtils. Keyed by Slimefun item id.
-# name = display name with '&' colour codes. Missing items fall back to English.
+SIMPLE_ELEVATOR:
+  type:
+  - '&7&oBlocco'
+SIMPLE_SIEVE:
+  type:
+  - '&7&oMacchina multiblocco'
+SIMPLE_WORKBENCH:
+  type:
+  - '&7&oMacchina'
+SIMPLE_WRENCH:
+  type:
+  - '&7&oStrumento'

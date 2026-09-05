@@ -1,12 +1,12 @@
 SIMPLE_ELEVATOR:
   type:
-  - '&7&oBloco'
+  - '&7&oBlok'
 SIMPLE_SIEVE:
   type:
-  - '&7&oMáquina multibloco'
+  - '&7&oMultiblokmaskine'
 SIMPLE_WORKBENCH:
   type:
-  - '&7&oMáquina'
+  - '&7&oMaskine'
 SIMPLE_WRENCH:
   type:
-  - '&7&oFerramenta'
+  - '&7&oVærktøj'

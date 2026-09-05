@@ -1,2 +1,12 @@
-# German item translations for SimpleUtils. Keyed by Slimefun item id.
-# name = display name with '&' colour codes. Missing items fall back to English.
+SIMPLE_ELEVATOR:
+  type:
+  - '&7&oBlock'
+SIMPLE_SIEVE:
+  type:
+  - '&7&oMultiblock-Maschine'
+SIMPLE_WORKBENCH:
+  type:
+  - '&7&oMaschine'
+SIMPLE_WRENCH:
+  type:
+  - '&7&oWerkzeug'

@@ -1,0 +1,12 @@
+SIMPLE_ELEVATOR:
+  type:
+  - '&7&oΜπλοκ'
+SIMPLE_SIEVE:
+  type:
+  - '&7&oΠολυμπλόκ μηχανή'
+SIMPLE_WORKBENCH:
+  type:
+  - '&7&oΜηχανή'
+SIMPLE_WRENCH:
+  type:
+  - '&7&oΕργαλείο'

@@ -1,12 +1,12 @@
 SIMPLE_ELEVATOR:
   type:
-  - '&7&oBloco'
+  - '&7&oKhối'
 SIMPLE_SIEVE:
   type:
-  - '&7&oMáquina multibloco'
+  - '&7&oMáy Đa Khối'
 SIMPLE_WORKBENCH:
   type:
-  - '&7&oMáquina'
+  - '&7&oMáy Móc'
 SIMPLE_WRENCH:
   type:
-  - '&7&oFerramenta'
+  - '&7&oDụng Cụ'

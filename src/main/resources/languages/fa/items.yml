@@ -1,0 +1,12 @@
+SIMPLE_ELEVATOR:
+  type:
+  - '&7&oبلوک'
+SIMPLE_SIEVE:
+  type:
+  - '&7&oماشین چندبلوکی'
+SIMPLE_WORKBENCH:
+  type:
+  - '&7&oماشین'
+SIMPLE_WRENCH:
+  type:
+  - '&7&oابزار'
