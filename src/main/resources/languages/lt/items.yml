@@ -17,7 +17,7 @@ SIMPLE_SIEVE:
   - '&7žvyrą, kad išsijotumėte atsitiktinį grobį.'
 SIMPLE_WORKBENCH:
   description:
-  - '&7Gamina ir vanilinius, ir Slimefun receptus'
+  - '&7Gamina ir standartinius, ir Slimefun receptus'
   - '&7iš vienos sąsajos.'
   name: '&6Paprastas darbastalis'
   type:
