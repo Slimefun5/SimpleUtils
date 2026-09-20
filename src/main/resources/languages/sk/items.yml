@@ -1,12 +1,32 @@
 SIMPLE_ELEVATOR:
+  description:
+  - '&7Okamžite presúva medzi výťahmi nad sebou.'
+  name: '&fJednoduchý výťah'
   type:
   - '&7&oBlok'
+  usage:
+  - '&7Skokom ideš hore, prikrčením dole.'
 SIMPLE_SIEVE:
+  description:
+  - '&7Preosieva štrk na prachy a materiály.'
+  name: '&6Jednoduché sito'
   type:
   - '&7&oMultiblokový stroj'
+  usage:
+  - '&7Pravý klik na kompostér, keď držíš'
+  - '&7štrk, ho preoseje na náhodný predmet.'
 SIMPLE_WORKBENCH:
+  description:
+  - '&7Vyrába vanilla aj Slimefun recepty'
+  - '&7z jediného rozhrania.'
+  name: '&6Jednoduchý pracovný stôl'
   type:
   - '&7&oStroj'
 SIMPLE_WRENCH:
+  description:
+  - '&7Rýchlo rozoberie nákladné uzly, kondenzátory a stroje.'
+  name: '&6Jednoduchý kľúč'
   type:
   - '&7&oNástroj'
+  usage:
+  - '&ePravý klik na Slimefun blok ho rozoberie.'
