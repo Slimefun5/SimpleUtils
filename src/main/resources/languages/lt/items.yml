@@ -1,12 +1,32 @@
 SIMPLE_ELEVATOR:
+  description:
+  - '&7Akimirksniu perkelia tarp sukrautų liftų.'
+  name: '&fPaprastas liftas'
   type:
   - '&7&oBlokas'
+  usage:
+  - '&7Šokite, kad pakiltumėte, pritūpkite, kad nusileistumėte.'
 SIMPLE_SIEVE:
+  description:
+  - '&7Sijoja žvyrą į dulkes ir medžiagas.'
+  name: '&6Paprastas sietas'
   type:
   - '&7&oDaugiablokė mašina'
+  usage:
+  - '&7Spustelėkite dešiniu kompostuotoją laikydami'
+  - '&7žvyrą, kad išsijotumėte atsitiktinį grobį.'
 SIMPLE_WORKBENCH:
+  description:
+  - '&7Gamina ir vanilinius, ir Slimefun receptus'
+  - '&7iš vienos sąsajos.'
+  name: '&6Paprastas darbastalis'
   type:
   - '&7&oMašina'
 SIMPLE_WRENCH:
+  description:
+  - '&7Greitai išardo krovinių mazgus, kondensatorius ir mašinas.'
+  name: '&6Paprastas veržliaraktis'
   type:
   - '&7&oĮrankis'
+  usage:
+  - '&eSpustelėkite dešiniu Slimefun bloką, kad jį išardytumėte.'
