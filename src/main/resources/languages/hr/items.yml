@@ -1,12 +1,32 @@
 SIMPLE_ELEVATOR:
+  description:
+  - '&7Trenutno putuje između složenih dizala.'
+  name: '&fJednostavno dizalo'
   type:
   - '&7&oBlok'
+  usage:
+  - '&7Skoči za gore, čučni za dolje.'
 SIMPLE_SIEVE:
+  description:
+  - '&7Prosijava šljunak u prahove i materijale.'
+  name: '&6Jednostavno sito'
   type:
   - '&7&oVišeblokovni stroj'
+  usage:
+  - '&7Desni klik na kompostar dok držiš'
+  - '&7šljunak da ga prosiješ za nasumični ispust.'
 SIMPLE_WORKBENCH:
+  description:
+  - '&7Izrađuje i vanilla i Slimefun recepte'
+  - '&7iz jednog sučelja.'
+  name: '&6Jednostavni radni stol'
   type:
   - '&7&oStroj'
 SIMPLE_WRENCH:
+  description:
+  - '&7Brzo rastavlja teretne čvorove, kondenzatore i strojeve.'
+  name: '&6Jednostavni ključ'
   type:
   - '&7&oAlat'
+  usage:
+  - '&eDesni klik na Slimefun blok za rastavljanje.'
