@@ -1,12 +1,32 @@
 SIMPLE_ELEVATOR:
+  description:
+  - '&7Uzreiz pārvieto starp sakrautiem liftiem.'
+  name: '&fVienkāršais lifts'
   type:
   - '&7&oBloks'
+  usage:
+  - '&7Lec, lai kāptu augšup, pietupies, lai nokāptu.'
 SIMPLE_SIEVE:
+  description:
+  - '&7Izsijā granti putekļos un materiālos.'
+  name: '&6Vienkāršais siets'
   type:
   - '&7&oDaudzbloku mašīna'
+  usage:
+  - '&7Labais klikšķis uz kompostera, turot rokā'
+  - '&7granti, lai to izsijātu un iegūtu nejaušu priekšmetu.'
 SIMPLE_WORKBENCH:
+  description:
+  - '&7Izgatavo gan parastās, gan Slimefun receptes'
+  - '&7vienā saskarnē.'
+  name: '&6Vienkāršais darbgalds'
   type:
   - '&7&oMašīna'
 SIMPLE_WRENCH:
+  description:
+  - '&7Ātri izjauc kravas mezglus, kondensatorus un mašīnas.'
+  name: '&6Vienkāršā uzgriežņu atslēga'
   type:
   - '&7&oRīks'
+  usage:
+  - '&eLabais klikšķis uz Slimefun bloka, lai to izjauktu.'
