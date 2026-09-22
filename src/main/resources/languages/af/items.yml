@@ -1,12 +1,32 @@
 SIMPLE_ELEVATOR:
+  description:
+  - '&7Reis onmiddellik tussen gestapelde hysers.'
+  name: '&fEenvoudige Hyser'
   type:
   - '&7&oBlok'
+  usage:
+  - '&7Spring om op te gaan, hurk om af te gaan.'
 SIMPLE_SIEVE:
+  description:
+  - '&7Sif gruis in stowwe en materiale.'
+  name: '&6Eenvoudige Sif'
   type:
   - '&7&oMultiblok-Masjien'
+  usage:
+  - '&7Regsklik die komposmaker terwyl jy'
+  - '&7gruis vashou om dit vir ''n lukrake item te sif.'
 SIMPLE_WORKBENCH:
+  description:
+  - '&7Vervaardig beide standaard- en Slimefun-resepte'
+  - '&7vanuit ''n enkele koppelvlak.'
+  name: '&6Eenvoudige Werkbank'
   type:
   - '&7&oMasjien'
 SIMPLE_WRENCH:
+  description:
+  - '&7Haal vragnodusse, kapasitors en masjiene vinnig uit mekaar.'
+  name: '&6Eenvoudige Moersleutel'
   type:
   - '&7&oGereedskap'
+  usage:
+  - '&eRegsklik ''n Slimefun-blok om dit uit mekaar te haal.'
