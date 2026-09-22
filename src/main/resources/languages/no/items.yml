@@ -1,12 +1,32 @@
 SIMPLE_ELEVATOR:
+  description:
+  - '&7Reiser umiddelbart mellom stablede heiser.'
+  name: '&fEnkel heis'
   type:
   - '&7&oBlokk'
+  usage:
+  - '&7Hopp for å gå opp, snik for å gå ned.'
 SIMPLE_SIEVE:
+  description:
+  - '&7Sikter grus til støv og materialer.'
+  name: '&6Enkel sikt'
   type:
   - '&7&oMultiblokkmaskin'
+  usage:
+  - '&7Høyreklikk komposteren mens du holder'
+  - '&7grus for å sikte den for et tilfeldig utbytte.'
 SIMPLE_WORKBENCH:
+  description:
+  - '&7Lager både vanilla- og Slimefun-oppskrifter'
+  - '&7fra ett enkelt grensesnitt.'
+  name: '&6Enkel arbeidsbenk'
   type:
   - '&7&oMaskin'
 SIMPLE_WRENCH:
+  description:
+  - '&7Demonterer raskt fraktnoder, kondensatorer og maskiner.'
+  name: '&6Enkel skiftenøkkel'
   type:
   - '&7&oVerktøy'
+  usage:
+  - '&eHøyreklikk en Slimefun-blokk for å demontere den.'
