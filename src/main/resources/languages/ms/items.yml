@@ -1,12 +1,32 @@
 SIMPLE_ELEVATOR:
+  description:
+  - '&7Bergerak serta-merta antara lif yang bertindan.'
+  name: '&fLif Ringkas'
   type:
   - '&7&oBlok'
+  usage:
+  - '&7Lompat untuk naik, tunduk untuk turun.'
 SIMPLE_SIEVE:
+  description:
+  - '&7Menapis kerikil menjadi serbuk dan bahan.'
+  name: '&6Penapis Ringkas'
   type:
   - '&7&oMesin Multiblok'
+  usage:
+  - '&7Klik Kanan pengkompos sambil memegang'
+  - '&7kerikil untuk menapisnya bagi jatuhan rawak.'
 SIMPLE_WORKBENCH:
+  description:
+  - '&7Membuat resipi asli dan Slimefun sekali gus'
+  - '&7daripada satu antara muka sahaja.'
+  name: '&6Meja Kerja Ringkas'
   type:
   - '&7&oMesin'
 SIMPLE_WRENCH:
+  description:
+  - '&7Menanggalkan nod kargo, kapasitor dan mesin dengan pantas.'
+  name: '&6Sepana Ringkas'
   type:
   - '&7&oAlat'
+  usage:
+  - '&eKlik Kanan sesuatu blok Slimefun untuk menanggalkannya.'
