@@ -1,12 +1,32 @@
 SIMPLE_ELEVATOR:
+  description:
+  - '&7Seketika berpindah antar lift yang bertumpuk.'
+  name: '&fLift Sederhana'
   type:
   - '&7&oBlok'
+  usage:
+  - '&7Lompat untuk naik, jongkok untuk turun.'
 SIMPLE_SIEVE:
+  description:
+  - '&7Mengayak kerikil menjadi serbuk dan bahan.'
+  name: '&6Ayakan Sederhana'
   type:
   - '&7&oMesin Multiblock'
+  usage:
+  - '&7Klik Kanan pengompos sambil memegang'
+  - '&7kerikil untuk mengayaknya demi jatuhan acak.'
 SIMPLE_WORKBENCH:
+  description:
+  - '&7Membuat resep vanilla maupun Slimefun'
+  - '&7dari satu antarmuka.'
+  name: '&6Meja Kerja Sederhana'
   type:
   - '&7&oMesin'
 SIMPLE_WRENCH:
+  description:
+  - '&7Dengan cepat membongkar simpul kargo, kapasitor dan mesin.'
+  name: '&6Kunci Pas Sederhana'
   type:
   - '&7&oAlat'
+  usage:
+  - '&eKlik Kanan blok Slimefun untuk membongkarnya.'
