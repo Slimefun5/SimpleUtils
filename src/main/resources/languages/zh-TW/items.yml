@@ -1,12 +1,32 @@
 SIMPLE_ELEVATOR:
+  description:
+  - '&7在上下堆疊的電梯之間立即移動。'
+  name: '&f簡易電梯'
   type:
   - '&7&o方塊'
+  usage:
+  - '&7跳躍向上，潛行向下。'
 SIMPLE_SIEVE:
+  description:
+  - '&7將礫石篩成粉末與材料。'
+  name: '&6簡易篩子'
   type:
   - '&7&o多重方塊機器'
+  usage:
+  - '&7手持礫石右鍵點擊堆肥桶，'
+  - '&7即可篩出隨機的掉落物。'
 SIMPLE_WORKBENCH:
+  description:
+  - '&7在單一介面中合成原版與'
+  - '&7Slimefun 的配方。'
+  name: '&6簡易工作台'
   type:
   - '&7&o機器'
 SIMPLE_WRENCH:
+  description:
+  - '&7快速拆除貨物節點、電容器與機器。'
+  name: '&6簡易扳手'
   type:
   - '&7&o工具'
+  usage:
+  - '&e右鍵點擊 Slimefun 方塊即可拆除它。'
