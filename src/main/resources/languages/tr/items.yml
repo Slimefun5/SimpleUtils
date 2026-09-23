@@ -1,12 +1,32 @@
 SIMPLE_ELEVATOR:
+  description:
+  - '&7Üst üste dizili asansörler arasında anında yolculuk.'
+  name: '&fBasit Asansör'
   type:
   - '&7&oBlok'
+  usage:
+  - '&7Yukarı çıkmak için zıpla, inmek için eğil.'
 SIMPLE_SIEVE:
+  description:
+  - '&7Çakılı eleyerek tozlara ve malzemelere ayırır.'
+  name: '&6Basit Elek'
   type:
   - '&7&oYapı Makinesi'
+  usage:
+  - '&7Rastgele bir eşya için elinde çakıl'
+  - '&7varken kompostlayıcıya Sağ Tıkla.'
 SIMPLE_WORKBENCH:
+  description:
+  - '&7Hem vanilla hem Slimefun tariflerini'
+  - '&7tek bir arayüzden üretir.'
+  name: '&6Basit Tezgah'
   type:
   - '&7&oMakine'
 SIMPLE_WRENCH:
+  description:
+  - '&7Kargo düğümlerini, kapasitörleri ve makineleri hızlıca söker.'
+  name: '&6Basit İngiliz Anahtarı'
   type:
   - '&7&oAlet'
+  usage:
+  - '&eSökmek için bir Slimefun bloğuna Sağ Tıkla.'
