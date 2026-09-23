@@ -1,12 +1,32 @@
 SIMPLE_ELEVATOR:
+  description:
+  - '&7Viaggia istantaneamente tra ascensori impilati.'
+  name: '&fAscensore Semplice'
   type:
   - '&7&oBlocco'
+  usage:
+  - '&7Salta per salire, accovacciati per scendere.'
 SIMPLE_SIEVE:
+  description:
+  - '&7Setaccia la ghiaia in polveri e materiali.'
+  name: '&6Setaccio Semplice'
   type:
   - '&7&oMacchina multiblocco'
+  usage:
+  - '&7Clic destro sulla compostiera tenendo in mano'
+  - '&7della ghiaia per setacciarla e ottenere un oggetto casuale.'
 SIMPLE_WORKBENCH:
+  description:
+  - '&7Fabbrica ricette sia vanilla che Slimefun'
+  - '&7da un''unica interfaccia.'
+  name: '&6Banco da Lavoro Semplice'
   type:
   - '&7&oMacchina'
 SIMPLE_WRENCH:
+  description:
+  - '&7Smonta rapidamente nodi cargo, condensatori e macchine.'
+  name: '&6Chiave Inglese Semplice'
   type:
   - '&7&oStrumento'
+  usage:
+  - '&eClic Destro su un blocco Slimefun per smontarlo.'
