@@ -1,12 +1,32 @@
 SIMPLE_ELEVATOR:
+  description:
+  - '&7Natychmiast przenosi między windami ustawionymi w pionie.'
+  name: '&fProsta winda'
   type:
   - '&7&oBlok'
+  usage:
+  - '&7Skocz, aby wjechać w górę, skradaj się, aby zjechać w dół.'
 SIMPLE_SIEVE:
+  description:
+  - '&7Przesiewa żwir na pyły i materiały.'
+  name: '&6Proste sito'
   type:
   - '&7&oMaszyna multiblokowa'
+  usage:
+  - '&7Kliknij prawym kompostownik, trzymając'
+  - '&7żwir, aby przesiać go na losowy łup.'
 SIMPLE_WORKBENCH:
+  description:
+  - '&7Wytwarza przepisy vanilla i Slimefun'
+  - '&7z jednego interfejsu.'
+  name: '&6Prosty stół roboczy'
   type:
   - '&7&oMaszyna'
 SIMPLE_WRENCH:
+  description:
+  - '&7Szybko demontuje węzły cargo, kondensatory i maszyny.'
+  name: '&6Prosty klucz'
   type:
   - '&7&oNarzędzie'
+  usage:
+  - '&eKliknij prawym blok Slimefun, aby go zdemontować.'
