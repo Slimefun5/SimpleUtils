@@ -1,12 +1,32 @@
 SIMPLE_ELEVATOR:
+  description:
+  - '&7Voyage instantanément entre les ascenseurs empilés.'
+  name: '&fAscenseur simple'
   type:
   - '&7&oBloc'
+  usage:
+  - '&7Sautez pour monter, accroupissez-vous pour descendre.'
 SIMPLE_SIEVE:
+  description:
+  - '&7Tamise le gravier en poudres et matériaux.'
+  name: '&6Tamis simple'
   type:
   - '&7&oMachine multibloc'
+  usage:
+  - '&7Clic droit sur le composteur en tenant'
+  - '&7du gravier pour le tamiser et obtenir un butin aléatoire.'
 SIMPLE_WORKBENCH:
+  description:
+  - '&7Fabrique les recettes vanilla et Slimefun'
+  - '&7depuis une seule interface.'
+  name: '&6Établi simple'
   type:
   - '&7&oMachine'
 SIMPLE_WRENCH:
+  description:
+  - '&7Démonte rapidement les nœuds cargo, condensateurs et machines.'
+  name: '&6Clé à molette simple'
   type:
   - '&7&oOutil'
+  usage:
+  - '&eClic droit sur un bloc Slimefun pour le démonter.'
