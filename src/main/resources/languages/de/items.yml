@@ -1,12 +1,32 @@
 SIMPLE_ELEVATOR:
+  description:
+  - '&7Reist sofort zwischen gestapelten Aufzügen.'
+  name: '&fSimpler Aufzug'
   type:
   - '&7&oBlock'
+  usage:
+  - '&7Springe zum Hochfahren, schleiche zum Runterfahren.'
 SIMPLE_SIEVE:
+  description:
+  - '&7Siebt Kies zu Stäuben und Materialien.'
+  name: '&6Simples Sieb'
   type:
   - '&7&oMultiblock-Maschine'
+  usage:
+  - '&7Rechtsklick auf den Komposter, während du'
+  - '&7Kies hältst, um einen zufälligen Gegenstand zu erhalten.'
 SIMPLE_WORKBENCH:
+  description:
+  - '&7Stellt Vanilla- und Slimefun-Rezepte'
+  - '&7über eine einzige Oberfläche her.'
+  name: '&6Simple Werkbank'
   type:
   - '&7&oMaschine'
 SIMPLE_WRENCH:
+  description:
+  - '&7Baut Cargo-Knoten, Kondensatoren und Maschinen schnell ab.'
+  name: '&6Simpler Schraubenschlüssel'
   type:
   - '&7&oWerkzeug'
+  usage:
+  - '&eRechtsklick auf einen Slimefun-Block, um ihn abzubauen.'
