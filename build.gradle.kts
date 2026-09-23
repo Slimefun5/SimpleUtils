@@ -7,7 +7,7 @@ plugins {
 group = "io.github.mooy1"
 description = "SimpleUtils is a Slimefun addon that adds simple utility items and blocks."
 
-apply(from = "https://raw.githubusercontent.com/Slimefun5/gradle/stable/slimefun-addon.gradle")
+apply(from = "https://raw.githubusercontent.com/Slimefun5/gradle/main/slimefun-addon.gradle")
 
 dependencies {
     githubImplementation("Slimefun5:InfinityLib:v1.3.14.7")
