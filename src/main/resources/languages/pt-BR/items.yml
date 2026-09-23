@@ -1,12 +1,32 @@
 SIMPLE_ELEVATOR:
+  description:
+  - '&7Viaja instantaneamente entre elevadores empilhados.'
+  name: '&fElevador Simples'
   type:
   - '&7&oBloco'
+  usage:
+  - '&7Pule para subir, agache para descer.'
 SIMPLE_SIEVE:
+  description:
+  - '&7Peneira cascalho em pós e materiais.'
+  name: '&6Peneira Simples'
   type:
   - '&7&oMáquina multibloco'
+  usage:
+  - '&7Clique Direito no compostor segurando'
+  - '&7cascalho para peneirá-lo e obter um item aleatório.'
 SIMPLE_WORKBENCH:
+  description:
+  - '&7Fabrica receitas do vanilla e do Slimefun'
+  - '&7em uma única interface.'
+  name: '&6Bancada Simples'
   type:
   - '&7&oMáquina'
 SIMPLE_WRENCH:
+  description:
+  - '&7Desmonta rapidamente nós de carga, capacitores e máquinas.'
+  name: '&6Chave Inglesa Simples'
   type:
   - '&7&oFerramenta'
+  usage:
+  - '&eClique Direito em um bloco do Slimefun para desmontá-lo.'
