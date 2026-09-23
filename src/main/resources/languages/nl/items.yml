@@ -1,12 +1,32 @@
 SIMPLE_ELEVATOR:
+  description:
+  - '&7Reist onmiddellijk tussen gestapelde liften.'
+  name: '&fEenvoudige lift'
   type:
   - '&7&oBlok'
+  usage:
+  - '&7Spring om omhoog te gaan, sluip om omlaag te gaan.'
 SIMPLE_SIEVE:
+  description:
+  - '&7Zeeft grind tot poeders en materialen.'
+  name: '&6Eenvoudige zeef'
   type:
   - '&7&oMultiblokmachine'
+  usage:
+  - '&7Rechtsklik op de composteerbak terwijl je'
+  - '&7grind vasthoudt om er een willekeurige drop uit te zeven.'
 SIMPLE_WORKBENCH:
+  description:
+  - '&7Vervaardigt zowel vanilla- als Slimefun-recepten'
+  - '&7vanuit één interface.'
+  name: '&6Eenvoudige werkbank'
   type:
   - '&7&oMachine'
 SIMPLE_WRENCH:
+  description:
+  - '&7Demonteert snel vrachtknooppunten, condensatoren en machines.'
+  name: '&6Eenvoudige moersleutel'
   type:
   - '&7&oGereedschap'
+  usage:
+  - '&eRechtsklik op een Slimefun-blok om het te demonteren.'
