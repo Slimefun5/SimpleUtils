@@ -1,12 +1,32 @@
 SIMPLE_ELEVATOR:
+  description:
+  - '&7Viaja al instante entre ascensores apilados.'
+  name: '&fAscensor Simple'
   type:
   - '&7&oBloque'
+  usage:
+  - '&7Salta para subir, agáchate para bajar.'
 SIMPLE_SIEVE:
+  description:
+  - '&7Criba grava para obtener polvos y materiales.'
+  name: '&6Criba Simple'
   type:
   - '&7&oMáquina multibloque'
+  usage:
+  - '&7Haz clic derecho en el compostador sosteniendo'
+  - '&7grava para cribarla y obtener un objeto aleatorio.'
 SIMPLE_WORKBENCH:
+  description:
+  - '&7Fabrica recetas tanto de vanilla como de Slimefun'
+  - '&7desde una sola interfaz.'
+  name: '&6Mesa de Trabajo Simple'
   type:
   - '&7&oMáquina'
 SIMPLE_WRENCH:
+  description:
+  - '&7Desmonta rápidamente nodos de carga, condensadores y máquinas.'
+  name: '&6Llave Simple'
   type:
   - '&7&oHerramienta'
+  usage:
+  - '&eClic derecho en un bloque de Slimefun para desmontarlo.'
