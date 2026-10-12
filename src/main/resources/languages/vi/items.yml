@@ -1,12 +1,32 @@
 SIMPLE_ELEVATOR:
+  description:
+  - '&7Di chuyển ngay lập tức giữa các thang máy xếp chồng.'
+  name: '&fThang máy Đơn giản'
   type:
   - '&7&oKhối'
+  usage:
+  - '&7Nhảy để lên, ngồi để xuống.'
 SIMPLE_SIEVE:
+  description:
+  - '&7Sàng sỏi thành bột và nguyên liệu.'
+  name: '&6Sàng Đơn giản'
   type:
   - '&7&oMáy Đa Khối'
+  usage:
+  - '&7Chuột phải vào máy ủ phân khi đang cầm'
+  - '&7sỏi để sàng lấy một vật phẩm rơi ra ngẫu nhiên.'
 SIMPLE_WORKBENCH:
+  description:
+  - '&7Chế tạo cả công thức nguyên bản và Slimefun'
+  - '&7từ một giao diện duy nhất.'
+  name: '&6Bàn chế tạo Đơn giản'
   type:
   - '&7&oMáy Móc'
 SIMPLE_WRENCH:
+  description:
+  - '&7Nhanh chóng tháo rời các nút hàng hóa, tụ điện và máy.'
+  name: '&6Cờ lê Đơn giản'
   type:
   - '&7&oDụng Cụ'
+  usage:
+  - '&eChuột phải vào một khối Slimefun để tháo rời nó.'
