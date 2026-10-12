@@ -1,12 +1,32 @@
 SIMPLE_ELEVATOR:
+  description:
+  - '&7Siirtää välittömästi pinottujen hissien välillä.'
+  name: '&fYksinkertainen hissi'
   type:
   - '&7&oPalikka'
+  usage:
+  - '&7Hyppää noustaksesi, kyyristy laskeutuaksesi.'
 SIMPLE_SIEVE:
+  description:
+  - '&7Seuloo soran pölyiksi ja materiaaleiksi.'
+  name: '&6Yksinkertainen seula'
   type:
   - '&7&oMultiblokkikone'
+  usage:
+  - '&7Napsauta oikealla kompostoria pitäen'
+  - '&7soraa kädessä seuloaksesi satunnaisen pudotuksen.'
 SIMPLE_WORKBENCH:
+  description:
+  - '&7Valmistaa sekä vanilla- että Slimefun-reseptejä'
+  - '&7yhdestä käyttöliittymästä.'
+  name: '&6Yksinkertainen verstas'
   type:
   - '&7&oKone'
 SIMPLE_WRENCH:
+  description:
+  - '&7Purkaa nopeasti rahtisolmut, kondensaattorit ja koneet.'
+  name: '&6Yksinkertainen jakoavain'
   type:
   - '&7&oTyökalu'
+  usage:
+  - '&eNapsauta oikealla Slimefun-palikkaa purkaaksesi sen.'
