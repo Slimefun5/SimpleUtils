@@ -1,12 +1,32 @@
 SIMPLE_ELEVATOR:
+  description:
+  - '&7Te deplasează instantaneu între lifturi stivuite.'
+  name: '&fLift Simplu'
   type:
   - '&7&oBloc'
+  usage:
+  - '&7Sari pentru a urca, ghemuiește-te pentru a coborî.'
 SIMPLE_SIEVE:
+  description:
+  - '&7Cerne pietrișul în prafuri și materiale.'
+  name: '&6Sită Simplă'
   type:
   - '&7&oMașină multibloc'
+  usage:
+  - '&7Clic dreapta pe compostor în timp ce ții'
+  - '&7pietriș pentru a-l cerne și a obține un obiect aleatoriu.'
 SIMPLE_WORKBENCH:
+  description:
+  - '&7Fabrică atât rețete vanilla, cât și Slimefun'
+  - '&7dintr-o singură interfață.'
+  name: '&6Banc de lucru Simplu'
   type:
   - '&7&oMașină'
 SIMPLE_WRENCH:
+  description:
+  - '&7Demontează rapid noduri cargo, condensatoare și mașini.'
+  name: '&6Cheie Simplă'
   type:
   - '&7&oUnealtă'
+  usage:
+  - '&eClic dreapta pe un bloc Slimefun pentru a-l demonta.'
