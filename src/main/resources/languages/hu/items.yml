@@ -1,12 +1,32 @@
 SIMPLE_ELEVATOR:
+  description:
+  - '&7Azonnal utazik az egymásra helyezett liftek között.'
+  name: '&fEgyszerű Lift'
   type:
   - '&7&oBlokk'
+  usage:
+  - '&7Ugrás a felmenéshez, guggolás a lemenéshez.'
 SIMPLE_SIEVE:
+  description:
+  - '&7Porokká és anyagokká szitálja a kavicsot.'
+  name: '&6Egyszerű Szita'
   type:
   - '&7&oMultiblock gép'
+  usage:
+  - '&7Jobb Klikk a komposztálóra, miközben'
+  - '&7kavicsot tartasz, hogy véletlen zsákmányra szitáld.'
 SIMPLE_WORKBENCH:
+  description:
+  - '&7Vanilla és Slimefun recepteket is barkácsol'
+  - '&7egyetlen felületről.'
+  name: '&6Egyszerű Munkaasztal'
   type:
   - '&7&oGép'
 SIMPLE_WRENCH:
+  description:
+  - '&7Gyorsan szétszedi a tehercsomópontokat, kondenzátorokat és gépeket.'
+  name: '&6Egyszerű Csavarkulcs'
   type:
   - '&7&oEszköz'
+  usage:
+  - '&eJobb Klikk egy Slimefun blokkra a szétszedéséhez.'
