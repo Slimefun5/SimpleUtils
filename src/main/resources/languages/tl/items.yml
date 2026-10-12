@@ -1,12 +1,32 @@
 SIMPLE_ELEVATOR:
+  description:
+  - '&7Agad-agad na naglalakbay sa pagitan ng nakasalansang mga asensor.'
+  name: '&fPayak na Asensor'
   type:
   - '&7&oBloke'
+  usage:
+  - '&7Tumalon para umakyat, yumuko para bumaba.'
 SIMPLE_SIEVE:
+  description:
+  - '&7Binibithay ang graba tungo sa mga alikabok at materyal.'
+  name: '&6Payak na Bithay'
   type:
   - '&7&oMakinang Maraming Bloke'
+  usage:
+  - '&7Kanang Pindot sa gawaan ng pataba habang may hawak na'
+  - '&7graba para bithayin ito at makakuha ng di-inaasahang bagay.'
 SIMPLE_WORKBENCH:
+  description:
+  - '&7Nililikha ang mga resipi ng orihinal at ng Slimefun'
+  - '&7mula sa isang panel lamang.'
+  name: '&6Payak na Gawaan'
   type:
   - '&7&oMakina'
 SIMPLE_WRENCH:
+  description:
+  - '&7Agad na binubuwag ang mga nodo ng kargamento, kapasitor at mga makina.'
+  name: '&6Payak na Liyabe'
   type:
   - '&7&oKasangkapan'
+  usage:
+  - '&eKanang Pindot sa bloke ng Slimefun para buwagin ito.'
