@@ -1,12 +1,32 @@
 SIMPLE_ELEVATOR:
+  description:
+  - '&7겹쳐 놓은 엘리베이터 사이를 즉시 이동합니다.'
+  name: '&f단순 엘리베이터'
   type:
   - '&7&o블록'
+  usage:
+  - '&7점프하면 올라가고, 웅크리면 내려갑니다.'
 SIMPLE_SIEVE:
+  description:
+  - '&7자갈을 걸러 가루와 재료를 얻습니다.'
+  name: '&6단순 체'
   type:
   - '&7&o멀티블록 기계'
+  usage:
+  - '&7자갈을 들고 퇴비통을 우클릭하면'
+  - '&7걸러서 무작위 드롭을 얻습니다.'
 SIMPLE_WORKBENCH:
+  description:
+  - '&7바닐라와 Slimefun 조합법을 모두'
+  - '&7하나의 화면에서 제작합니다.'
+  name: '&6단순 작업대'
   type:
   - '&7&o기계'
 SIMPLE_WRENCH:
+  description:
+  - '&7화물 노드, 축전기, 기계를 빠르게 해체합니다.'
+  name: '&6단순 렌치'
   type:
   - '&7&o도구'
+  usage:
+  - '&eSlimefun 블록을 우클릭하여 해체합니다.'
