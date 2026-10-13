@@ -281,12 +281,19 @@ public final class Workbench extends MenuBlock implements Listener {
         return null; // TODO find new way
     }
 
+    /**
+     * The Enhanced Crafting Table's display name in the viewer's own language, so the refusal never
+     * names a translated item in English.
+     *
+     * @implNote The name carries its own colour codes and the sentence continues after it, so the
+     *           line's colour is restored afterwards or the rest of the sentence takes the item's.
+     */
     @Nonnull
     private static String enhancedCraftingTableName(@Nonnull Player p) {
         SlimefunItem table = SlimefunItem.getByItem(SlimefunItems.ENHANCED_CRAFTING_TABLE);
-        return table != null
+        return (table != null
                 ? Slimefun.getItemTranslationService().getName(p, table)
-                : "Enhanced Crafting Table";
+                : "Enhanced Crafting Table") + ChatColor.RED;
     }
 
 }
