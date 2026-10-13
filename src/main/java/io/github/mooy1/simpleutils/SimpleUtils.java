@@ -24,6 +24,7 @@ public final class SimpleUtils extends AbstractAddon {
     protected void enable() {
         Items.setup(this);
         Slimefun.getItemTranslationService().registerTranslations(this);
+        Slimefun.getAddonMessageService().registerTranslations(this);
     }
 
     @Override

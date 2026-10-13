@@ -20,6 +20,7 @@ import io.github.mooy1.infinitylib.common.Scheduler;
 import io.github.mooy1.infinitylib.common.StackUtils;
 import io.github.mooy1.simpleutils.SimpleUtils;
 import io.github.mooy1.simpleutils.utils.MaterialCompat;
+import io.github.mooy1.simpleutils.utils.Messages;
 import io.github.thebusybiscuit.slimefun5.api.items.ItemGroup;
 import io.github.thebusybiscuit.slimefun5.api.items.SlimefunItemStack;
 import io.github.thebusybiscuit.slimefun5.core.multiblocks.MultiBlockMachine;
@@ -73,7 +74,7 @@ public final class Sieve extends MultiBlockMachine {
         ItemStack input = HandCompat.getMainHand(p.getInventory());
 
         if (StackUtils.getId(input) != null || input.getType() != MaterialCompat.safe(XMaterial.GRAVEL)) {
-            p.sendMessage(ChatColor.RED + "Invalid Recipe!");
+            Messages.send(p, ChatColor.RED, "sieve.invalid-recipe", "Invalid Recipe!");
             return;
         }
 

@@ -27,12 +27,14 @@ import io.github.mooy1.infinitylib.machines.MachineLayout;
 import io.github.mooy1.infinitylib.machines.MenuBlock;
 import io.github.mooy1.simpleutils.SimpleUtils;
 import io.github.mooy1.simpleutils.utils.MaterialCompat;
+import io.github.mooy1.simpleutils.utils.Messages;
 import io.github.thebusybiscuit.slimefun5.api.MinecraftVersion;
 import io.github.thebusybiscuit.slimefun5.api.items.ItemGroup;
 import io.github.thebusybiscuit.slimefun5.api.items.SlimefunItem;
 import io.github.thebusybiscuit.slimefun5.api.items.SlimefunItemStack;
 import io.github.thebusybiscuit.slimefun5.api.recipes.RecipeType;
 import io.github.thebusybiscuit.slimefun5.implementation.Slimefun;
+import io.github.thebusybiscuit.slimefun5.implementation.SlimefunItems;
 import io.github.thebusybiscuit.slimefun5.implementation.items.backpacks.SlimefunBackpack;
 import io.github.thebusybiscuit.slimefun5.libraries.dough.items.CustomItemStack;
 import io.github.thebusybiscuit.slimefun5.libraries.dough.items.ItemStackSnapshot;
@@ -147,7 +149,8 @@ public final class Workbench extends MenuBlock implements Listener {
                     return;
                 }
                 if (item instanceof SlimefunBackpack) {
-                    p.sendMessage(ChatColor.RED + "Use the enhanced crafting table to upgrade backpacks!");
+                    Messages.send(p, ChatColor.RED, "workbench.backpack-upgrade", "Use the %item% to upgrade backpacks!",
+                            line -> line.replace("%item%", enhancedCraftingTableName(p)));
                     return;
                 }
             }
@@ -276,6 +279,14 @@ public final class Workbench extends MenuBlock implements Listener {
     @Nullable
     private static ItemStack craftItemOld(ItemStack[] input, Player p) {
         return null; // TODO find new way
+    }
+
+    @Nonnull
+    private static String enhancedCraftingTableName(@Nonnull Player p) {
+        SlimefunItem table = SlimefunItem.getByItem(SlimefunItems.ENHANCED_CRAFTING_TABLE);
+        return table != null
+                ? Slimefun.getItemTranslationService().getName(p, table)
+                : "Enhanced Crafting Table";
     }
 
 }
