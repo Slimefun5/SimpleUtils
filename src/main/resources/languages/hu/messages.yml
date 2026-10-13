@@ -1,0 +1,5 @@
+sieve:
+  invalid-recipe: "Érvénytelen recept!"
+
+workbench:
+  backpack-upgrade: "A hátizsákok fejlesztéséhez használd ezt: %item%!"

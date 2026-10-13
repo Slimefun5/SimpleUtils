@@ -1,0 +1,5 @@
+sieve:
+  invalid-recipe: "Geçersiz tarif!"
+
+workbench:
+  backpack-upgrade: "Sırt çantalarını yükseltmek için %item% kullan!"

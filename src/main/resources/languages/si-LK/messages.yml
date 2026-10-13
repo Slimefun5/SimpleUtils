@@ -1,0 +1,5 @@
+sieve:
+  invalid-recipe: "වලංගු නොවන වට්ටෝරුවක්!"
+
+workbench:
+  backpack-upgrade: "පිටබෑග උසස් කිරීමට %item% භාවිත කරන්න!"

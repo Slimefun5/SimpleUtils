@@ -1,0 +1,5 @@
+sieve:
+  invalid-recipe: "Ugyldig opskrift!"
+
+workbench:
+  backpack-upgrade: "Brug %item% til at opgradere rygsække!"

@@ -1,0 +1,5 @@
+sieve:
+  invalid-recipe: "دستور ساخت نامعتبر است!"
+
+workbench:
+  backpack-upgrade: "برای ارتقای کوله‌پشتی‌ها از %item% استفاده کن!"

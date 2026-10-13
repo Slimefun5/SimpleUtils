@@ -1,0 +1,5 @@
+sieve:
+  invalid-recipe: "Netinkamas receptas!"
+
+workbench:
+  backpack-upgrade: "Kuprinėms patobulinti naudok %item%!"

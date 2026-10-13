@@ -1,0 +1,5 @@
+sieve:
+  invalid-recipe: "Resipi tidak sah!"
+
+workbench:
+  backpack-upgrade: "Gunakan %item% untuk menambah baik beg galas!"

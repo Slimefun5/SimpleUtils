@@ -1,0 +1,5 @@
+sieve:
+  invalid-recipe: "สูตรไม่ถูกต้อง!"
+
+workbench:
+  backpack-upgrade: "ใช้ %item% เพื่ออัปเกรดกระเป๋าเป้!"

@@ -1,0 +1,5 @@
+sieve:
+  invalid-recipe: "وصفة غير صالحة!"
+
+workbench:
+  backpack-upgrade: "استخدم %item% لترقية حقائب الظهر!"

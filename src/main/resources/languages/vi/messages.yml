@@ -1,0 +1,5 @@
+sieve:
+  invalid-recipe: "Công thức không hợp lệ!"
+
+workbench:
+  backpack-upgrade: "Dùng %item% để nâng cấp ba lô!"

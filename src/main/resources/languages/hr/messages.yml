@@ -1,0 +1,5 @@
+sieve:
+  invalid-recipe: "Nevažeći recept!"
+
+workbench:
+  backpack-upgrade: "Koristi %item% za nadogradnju ruksaka!"

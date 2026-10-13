@@ -1,0 +1,5 @@
+sieve:
+  invalid-recipe: "Virheellinen resepti!"
+
+workbench:
+  backpack-upgrade: "Käytä %item% reppujen parantamiseen!"

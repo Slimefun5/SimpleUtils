@@ -1,0 +1,5 @@
+sieve:
+  invalid-recipe: "無效的配方！"
+
+workbench:
+  backpack-upgrade: "請使用%item%來升級背包！"

@@ -1,0 +1,5 @@
+sieve:
+  invalid-recipe: "Ungültiges Rezept!"
+
+workbench:
+  backpack-upgrade: "Verwende %item%, um Rucksäcke zu verbessern!"

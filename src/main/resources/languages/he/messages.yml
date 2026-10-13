@@ -1,0 +1,5 @@
+sieve:
+  invalid-recipe: "מתכון לא חוקי!"
+
+workbench:
+  backpack-upgrade: "השתמש ב-%item% כדי לשדרג תיקי גב!"

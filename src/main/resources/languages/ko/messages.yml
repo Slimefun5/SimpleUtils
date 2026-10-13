@@ -1,0 +1,5 @@
+sieve:
+  invalid-recipe: "잘못된 제작법입니다!"
+
+workbench:
+  backpack-upgrade: "가방을 업그레이드하려면 %item%을 사용하세요!"

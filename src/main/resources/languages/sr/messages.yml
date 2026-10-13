@@ -1,0 +1,5 @@
+sieve:
+  invalid-recipe: "Неважећи рецепт!"
+
+workbench:
+  backpack-upgrade: "Користи %item% за надоградњу ранаца!"
