@@ -270,7 +270,7 @@ public final class Workbench extends MenuBlock implements Listener {
         try {
             Method craftItem = Bukkit.class.getMethod("craftItem", ItemStack[].class, org.bukkit.World.class, Player.class);
             ItemStack output = (ItemStack) craftItem.invoke(null, (Object) input, p.getWorld(), p);
-            return output == null || output.getType().isAir() ? null : output;
+            return output == null || MaterialCompat.isAir(output.getType()) ? null : output;
         } catch (ReflectiveOperationException e) {
             return null;
         }

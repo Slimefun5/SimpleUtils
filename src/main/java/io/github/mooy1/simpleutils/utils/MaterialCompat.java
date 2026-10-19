@@ -1,6 +1,7 @@
 package io.github.mooy1.simpleutils.utils;
 
 import javax.annotation.Nonnull;
+import javax.annotation.Nullable;
 
 import org.bukkit.Material;
 
@@ -58,5 +59,10 @@ public final class MaterialCompat {
     private static Material substitute(XMaterial xMaterial) {
         XMaterial sub = LEGACY_SUBSTITUTES.get(xMaterial);
         return sub != null ? sub.parseMaterial() : null;
+    }
+
+    /** {@code Material#isAir()} is 1.13+. */
+    public static boolean isAir(@Nullable Material material) {
+        return io.github.thebusybiscuit.slimefun5.utils.compatibility.MaterialCompat.isAir(material);
     }
 }
